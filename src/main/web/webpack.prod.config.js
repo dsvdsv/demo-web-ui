@@ -49,7 +49,7 @@ module.exports = {
     ]
   },
   output: {
-    path: './dist',
+    path: '../../../build/generated-web-resources/static/',
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'

@@ -45,6 +45,7 @@ eclipse {
 }
 
 def generatedWebResources = "${buildDir}/generated-web-resources"
+def webResources = file("${project.projectDir}/src/main/web")
 
 sourceSets {
 	main {
@@ -57,6 +58,13 @@ node {
 	version = '6.3.0'
 	npmVersion = '3.10.5'
 	download = true
-	workDir = file("${project.projectDir}/src/main/web/node")
-	nodeModulesDir = file("${project.projectDir}/src/main/web")
+	workDir = file("${webResources}/node")
+	nodeModulesDir = webResources
 }
+
+npm_run_build {
+	workingDir = webResources
+}
+
+
+jar.dependsOn(npm_run_build)

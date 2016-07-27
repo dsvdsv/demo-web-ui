@@ -3,14 +3,14 @@ import {Http} from '@angular/http';
 
 
 @Component({
-  selector: 'about',
-  templateUrl: 'app/home/pages/about/about.html',
-  styleUrls: ['app/home/pages/about/about.css'],
+  selector: 'payment',
+  templateUrl: 'app/pages/payment/payment.html',
+  styleUrls: ['app/pages/payment/payment.css'],
   providers: [],
   directives: [],
   pipes: []
 })
-export class About {
+export class Payment {
 
   constructor(http: Http) {
 

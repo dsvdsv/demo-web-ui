@@ -3,14 +3,12 @@
   "description": "",
   "private":true,
   "scripts": {
-    "clean": "rimraf dist",
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
     "build": "webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached",
     "watch": "npm run build -- --watch",
-    "server":"webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080",
+    "server":"webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8081",
     "preserve:dist": "npm run build",
-    "serve:dist": "static dist",
     "start": "npm run server"
   },
   "dependencies": {
