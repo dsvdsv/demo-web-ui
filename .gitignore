@@ -3,3 +3,5 @@
 /.idea/
 /.gradle/
 npm-debug.log
+
+!/build/libs/demo-web-ui-0.0.1-SNAPSHOT.jar

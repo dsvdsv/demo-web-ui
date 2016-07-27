@@ -1,2 +1,172 @@
-<h3>About Component1</h3>
-<p>This is the about component!</p>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>E-commerce payments</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a>E-commerce payments</a>
+            </li>
+            <li class="active">
+                <strong>Payments</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="payment-card">
+                <i class="fa fa-cc-visa payment-icon-big text-success"></i>
+                <h2>
+                    **** **** **** 1060
+                </h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <small>
+                            <strong>Expiry date:</strong> 10/16
+                        </small>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <small>
+                            <strong>Name:</strong> David Williams
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="payment-card">
+                <i class="fa fa-cc-mastercard payment-icon-big text-warning"></i>
+                <h2>
+                    **** **** **** 7002
+                </h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <small>
+                            <strong>Expiry date:</strong> 10/16
+                        </small>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <small>
+                            <strong>Name:</strong> Anna Smith
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="payment-card">
+                <i class="fa fa-cc-discover payment-icon-big text-danger"></i>
+                <h2>
+                    **** **** **** 3466
+                </h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <small>
+                            <strong>Expiry date:</strong> 10/16
+                        </small>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <small>
+                            <strong>Name:</strong> Morgan Stanch
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="ibox">
+                <div class="ibox-title">
+                    Payment method
+                </div>
+                <div class="ibox-content">
+
+                    <div class="panel-group payments-method" id="accordion">
+
+                        <div class="panel panel-default" *ngFor="let provider of providers | async">
+                            <div class="panel-heading">
+                                <div class="pull-right">
+                                    <i class="fa fa-cc-amex text-success"></i>
+                                    <i class="fa fa-cc-mastercard text-warning"></i>
+                                    <i class="fa fa-cc-discover text-danger"></i>
+                                </div>
+                                <h5 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" [href] = "'#collapse'+provider.name" >{{provider.name}}</a>
+                                </h5>
+                            </div>
+                            <div [id] = "'collapse'+provider.name" class="panel-collapse collapse">
+                                <div class="panel-body">
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h2>Summary</h2>
+                                            <!--<strong>Product:</strong>: Name of product <br/>-->
+                                            <strong>Commission:</strong> <span class="text-navy">{{provider.commission}}</span>
+
+                                            <p class="m-t">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat.
+
+                                            </p>
+                                            <p>
+                                                Duis aute irure dolor
+                                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur. Excepteur sint occaecat cupidatat.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <form role="form">
+                                                <div class="row" *ngFor="let field of provider.fields">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            <label>{{field.title}}</label>
+                                                                <input type="text" class="form-control" [name]="field.name"
+                                                                       [pattern]="field.mask" required/>
+                                                                <span class="help-block m-b-none">Please enter the text satisfying pattern {{field.mask}}.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <button class="btn btn-primary" type="submit">Make a payment!
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

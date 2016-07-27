@@ -1,36 +1,16 @@
-export class User {
+export class Field {
     constructor(
-        public username: string,
-        public enabled: boolean,
+       public name: string,
+       public title: string,
+       public mask: string
+    ) {}
+}
+
+export class Provider {
+    constructor(
         public id: number,
-        creationDate: string
-    ) {}
-}
-
-export class AmountState {
-    constructor(
-        public count: number,
-        public sum: number,
-        public max: number,
-        public min: number,
-        public avg: number,
-        public date: string
-    ) {}
-}
-
-export class GroupedActionCodes {
-    constructor(
-        public time: string,
-        public codes : {
-            name: string,
-            count: number
-        }[]
-    ) {}
-}
-
-export class PaymentState {
-    constructor(
-        public state: string,
-        public count: number
+        public name: string,
+        public commission: number,
+        public fields: Field[]
     ) {}
 }

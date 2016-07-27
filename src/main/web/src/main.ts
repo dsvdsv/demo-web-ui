@@ -10,5 +10,4 @@ if (webpack.ENV === 'production') {
 
 bootstrap(App, [
     HTTP_PROVIDERS
-])
-    .catch(err => console.error(err));
+]).catch(err => console.error(err));
