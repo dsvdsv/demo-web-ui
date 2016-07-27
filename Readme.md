@@ -33,7 +33,7 @@
  
 ###Проблемы
 
-Возможно будут проблемы с полной сборкой проекта, поэтому публикую на всякий случай собранный jar, 
+Возможно будут проблемы с полной сборкой проекта, поэтому публикую на всякий случай собранный jar, [demo-web-ui-0.0.1-SNAPSHOT.jar](https://github.com/dsvdsv/demo-web-ui/raw/master/build/libs/demo-web-ui-0.0.1-SNAPSHOT.jar)
 запустить его можно так: 
  ```
   java -jar demo-web-ui-0.0.1-SNAPSHOT.jar
